@@ -18,7 +18,9 @@ class _HomePageState extends State<HomePage> {
           Icons.menu,
           color: Colors.grey[800],
         ),
-        actions: [Icon(Icons.person)],
+        actions: [
+          Icon(Icons.person),
+        ],
       ),
     );
   }
