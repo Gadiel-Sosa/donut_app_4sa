@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //* MaterialApp se usa para la configuración de la app
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.deepPurple), //* Color de la app
           useMaterial3: true,
           tabBarTheme: const TabBarTheme(
             indicatorColor: Colors.pink,

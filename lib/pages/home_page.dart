@@ -34,20 +34,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: myTabs.length,
+      //* se usa un controlador de pestañas por defecto
+      length: myTabs.length, //* longitud de pestañas
       child: Scaffold(
+        //* esqueleto de la app
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          //* AppBar se usa para la encabezado de la app
+          backgroundColor: Colors
+              .transparent, //*background se usa para el color de fondo de la app
           //icono izquierda
           leading: Padding(
+            //* leading se usa para el espacio a la izquierda del icono
             padding:
                 const EdgeInsets.only(left: 24.0), //esquina izq espacio de 24
+            //* EdgeInsets se usa para definir el tamaño y posición de los elementos
             child: Icon(
               Icons.menu,
               color: Colors.grey[800],
             ),
           ),
           actions: [
+            //* actions se usa para los botones de la appBar
             Padding(
               padding: const EdgeInsets.only(right: 24.0),
               child: Icon(Icons.person),
@@ -55,6 +62,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: Column(
+          //* colum se usa para organizar widgets de forma vertical
           //1.- Texto principal (Text)
           children: [
             Padding(
@@ -82,11 +90,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             //2.- Pestaña (TabBar)
-            TabBar(tabs: myTabs),
+            TabBar(tabs: myTabs), //* TabBar se usa para las pestañas
 
             //3.- Contenido de pestañas (TabBarView)
             Expanded(
+              //* Expanded se usa para expandir un widget
               child: TabBarView(children: [
+                //* TabBarView se usa para mostrar contenido de pestañas
                 DonutTab(),
                 BurgerTab(),
                 SmoothieTab(),

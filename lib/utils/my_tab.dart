@@ -10,6 +10,7 @@ class MyTab extends StatelessWidget {
     return Tab(
       height: 50,
       child: Container(
+        //* conteiner se usa para dar estilo al tab
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
             color: Colors.grey[200],
@@ -17,6 +18,7 @@ class MyTab extends StatelessWidget {
             borderRadius: BorderRadius.circular(16)),
         child:
             Image.asset(iconPath, color: Colors.grey[600]), //ruta dela rchivo
+        // asset se utiliza para cargar imagenes en flutter localmente
       ),
     );
   }
