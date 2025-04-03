@@ -3,6 +3,7 @@ import 'package:donut_app_4sa/tabs/donut_tab.dart';
 import 'package:donut_app_4sa/tabs/pancakes_tab.dart';
 import 'package:donut_app_4sa/tabs/pizza_tab.dart';
 import 'package:donut_app_4sa/tabs/smoothie_tab.dart';
+import 'package:donut_app_4sa/utils/shopping_cart.dart';
 import 'package:donut_app_4sa/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -103,8 +104,9 @@ class _HomePageState extends State<HomePage> {
                 PancakesTab(),
                 PizzaTab(),
               ]),
-            )
-            //4.- Carrito (Cart)
+            ),
+            //*4.- Carrito (Cart)
+            ShoppingCart()
           ],
         ),
       ),
