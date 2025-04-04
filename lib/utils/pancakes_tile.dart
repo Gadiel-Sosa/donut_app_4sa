@@ -39,7 +39,7 @@ class PancakesTile extends StatelessWidget {
                     ),
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-                    child: Text('\$45',
+                    child: Text('\$$donutPrice',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,

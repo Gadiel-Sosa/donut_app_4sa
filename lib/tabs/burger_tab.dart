@@ -6,32 +6,54 @@ class BurgerTab extends StatelessWidget {
   final List donutsOnSale = [
     // [ donutFlavor, donutStore, donutPrice, donutColor, imageName ]
     [
-      "Ice Cream",
-      "Krispy Kreme",
-      "36",
+      "Big Bacon",
+      "Wendy's",
+      "170",
       Colors.blue,
-      "lib/images/icecream_donut.png"
+      "lib/hamburguesa/big_bacon_wendys.png"
     ],
+    ["Big Mac", "McDonald's", "129", Colors.red, "lib/hamburguesa/Big_Mac.png"],
     [
-      "Strawberry",
-      "DonaLuxe",
-      "45",
-      Colors.red,
-      "lib/images/strawberry_donut.png"
-    ],
-    [
-      "Grape Ape",
-      "El Donero",
-      "84",
+      "Crispy Bacon",
+      "Big Apple",
+      "169",
       Colors.purple,
-      "lib/images/grape_donut.png"
+      "lib/hamburguesa/crispy_bacon.png"
     ],
     [
-      "Choco",
-      "DonaMagic",
-      "95",
+      "Grill Burger",
+      "Texas Burger",
+      "149",
       Colors.brown,
-      "lib/images/chocolate_donut.png"
+      "lib/hamburguesa/grill_burger.png"
+    ],
+    [
+      "McPollo",
+      "MacDonald's",
+      "89",
+      Colors.blue,
+      "lib/hamburguesa/mcpollo.png"
+    ],
+    [
+      "McTocino",
+      "MacDonald's",
+      "155",
+      Colors.red,
+      "lib/hamburguesa/mctocino.png"
+    ],
+    [
+      "Whopper",
+      "Burger King",
+      "179",
+      Colors.purple,
+      "lib/hamburguesa/whopper.png"
+    ],
+    [
+      "Whopper Jr",
+      "Burger King",
+      "109",
+      Colors.brown,
+      "lib/hamburguesa/WhopperJR-Doble.png"
     ],
   ];
 
@@ -47,7 +69,7 @@ class BurgerTab extends StatelessWidget {
           childAspectRatio: 1 / 1.6,
         ),
         //* Cuantos elementos
-        itemCount: 4,
+        itemCount: 8,
         padding: const EdgeInsets.all(12),
 
         //* Sirve para generar cada elemento

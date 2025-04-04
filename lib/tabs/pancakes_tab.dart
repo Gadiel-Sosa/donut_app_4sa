@@ -6,32 +6,54 @@ class PancakesTab extends StatelessWidget {
   final List donutsOnSale = [
     // [ donutFlavor, donutStore, donutPrice, donutColor, imageName ]
     [
-      "Ice Cream",
-      "Krispy Kreme",
-      "36",
+      "Blueberry",
+      "Brunch & Munch",
+      "189",
       Colors.blue,
-      "lib/images/icecream_donut.png"
+      "lib/pancakes/blueberry.png"
+    ],
+    [
+      "Chocolate",
+      "La Panquequeria",
+      "166",
+      Colors.red,
+      "lib/pancakes/chocolate.png"
+    ],
+    [
+      "Original",
+      "Órale Desayunos",
+      "165",
+      Colors.purple,
+      "lib/pancakes/clasicos.png"
     ],
     [
       "Strawberry",
-      "DonaLuxe",
-      "45",
-      Colors.red,
-      "lib/images/strawberry_donut.png"
-    ],
-    [
-      "Grape Ape",
-      "El Donero",
-      "84",
-      Colors.purple,
-      "lib/images/grape_donut.png"
-    ],
-    [
-      "Choco",
-      "DonaMagic",
-      "95",
+      "Brunch & Munch",
+      "169",
       Colors.brown,
-      "lib/images/chocolate_donut.png"
+      "lib/pancakes/fresa.png"
+    ],
+    [
+      "Integral",
+      "Órale Desayunos",
+      "190",
+      Colors.blue,
+      "lib/pancakes/integrales.png"
+    ],
+    ["Oreo", "Brunch & Munch", "150", Colors.red, "lib/pancakes/oreo.png"],
+    [
+      "Relleneo",
+      "La Panquequeria",
+      "120",
+      Colors.purple,
+      "lib/pancakes/Relleno.png"
+    ],
+    [
+      "Yogurt",
+      "Brunch & Munch",
+      "195",
+      Colors.brown,
+      "lib/pancakes/yogurt.png"
     ],
   ];
 
@@ -47,7 +69,7 @@ class PancakesTab extends StatelessWidget {
           childAspectRatio: 1 / 1.6,
         ),
         //* Cuantos elementos
-        itemCount: 4,
+        itemCount: 8,
         padding: const EdgeInsets.all(12),
 
         //* Sirve para generar cada elemento
