@@ -5,6 +5,7 @@ class SmoothieTile extends StatelessWidget {
   final String donutPrice;
   final dynamic donutColor; //dynamic porque es para color
   final String imageName;
+  final VoidCallback onAdd;
 
   final String donutStore;
   const SmoothieTile({
@@ -14,6 +15,7 @@ class SmoothieTile extends StatelessWidget {
     required this.donutPrice,
     required this.donutColor,
     required this.imageName,
+    required this.onAdd,
   });
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class SmoothieTile extends StatelessWidget {
                     ),
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-                    child: Text('\$45',
+                    child: Text('\$$donutPrice',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -81,9 +83,12 @@ class SmoothieTile extends StatelessWidget {
                       Icons.favorite_border,
                       color: Colors.pink,
                     ),
-                    Icon(
-                      Icons.add,
-                      color: Colors.grey,
+                    IconButton(
+                      icon: Icon(
+                        Icons.add,
+                        color: Colors.grey[800],
+                      ),
+                      onPressed: onAdd,
                     )
                   ],
                 ),

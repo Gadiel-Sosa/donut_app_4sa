@@ -37,6 +37,16 @@ class _HomePageState extends State<HomePage> {
       label: 'Pizza',
     )
   ];
+  int totalItems = 0; //* total de items en el carrito
+  int totalPrice = 0; //* total de precio en el carrito
+  void addToCart(String flavor, int price) {
+    //* se usa para agregar un donut al carrito
+    setState(() {
+      totalItems++; //* se incrementa el total de items
+      totalPrice += price; //* se incrementa el precio total
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -103,15 +113,28 @@ class _HomePageState extends State<HomePage> {
               //* Expanded se usa para expandir un widget
               child: TabBarView(children: [
                 //* TabBarView se usa para mostrar contenido de pestañas
-                DonutTab(),
-                BurgerTab(),
-                SmoothieTab(),
-                PancakesTab(),
-                PizzaTab(),
+                DonutTab(
+                  onDonutAdded: addToCart,
+                ),
+                BurgerTab(
+                  onDonutAdded: addToCart,
+                ),
+                SmoothieTab(
+                  onDonutAdded: addToCart,
+                ),
+                PancakesTab(
+                  onDonutAdded: addToCart,
+                ),
+                PizzaTab(
+                  onDonutAdded: addToCart,
+                ),
               ]),
             ),
             //*4.- Carrito (Cart)
-            ShoppingCart()
+            ShoppingCart(
+              totalItems: totalItems,
+              totalPrice: totalPrice,
+            )
           ],
         ),
       ),

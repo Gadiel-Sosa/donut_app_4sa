@@ -2,6 +2,7 @@ import 'package:donut_app_4sa/utils/donut_tile.dart';
 import 'package:flutter/material.dart';
 
 class DonutTab extends StatelessWidget {
+  final Function(String flavor, int price) onDonutAdded;
   //list of donuts
   final List donutsOnSale = [
     // [ donutFlavor, donutStore, donutPrice, donutColor, imageName ]
@@ -15,7 +16,7 @@ class DonutTab extends StatelessWidget {
     ["Rellenas", "Krispy Kreme", "45", Colors.purple, "lib/Donas/rellena.png"],
   ];
 
-  DonutTab({super.key});
+  DonutTab({super.key, required this.onDonutAdded});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +25,10 @@ class DonutTab extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           //*!Proporcion
-          childAspectRatio: 1 / 1.6,
+          childAspectRatio: 1 / 1.8,
         ),
         //* Cuantos elementos
-        itemCount: 8,
+        itemCount: donutsOnSale.length,
         padding: const EdgeInsets.all(12),
 
         //* Sirve para generar cada elemento
@@ -38,7 +39,14 @@ class DonutTab extends StatelessWidget {
             donutPrice: donutsOnSale[index][2],
             donutColor: donutsOnSale[index][3],
             imageName: donutsOnSale[index][4],
-          ); //tile azulejos
+            // Llamada a callback
+            onAdd: () {
+              onDonutAdded(
+                donutsOnSale[index][0],
+                int.parse(donutsOnSale[index][2]),
+              );
+            },
+          );
         });
   }
 }

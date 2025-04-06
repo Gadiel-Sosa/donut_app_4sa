@@ -5,6 +5,7 @@ class PancakesTile extends StatelessWidget {
   final String donutPrice;
   final dynamic donutColor; //dynamic porque es para color
   final String imageName;
+  final VoidCallback onAdd;
 
   final String donutStore;
   const PancakesTile({
@@ -14,6 +15,7 @@ class PancakesTile extends StatelessWidget {
     required this.donutPrice,
     required this.donutColor,
     required this.imageName,
+    required this.onAdd,
   });
   @override
   Widget build(BuildContext context) {
@@ -81,9 +83,12 @@ class PancakesTile extends StatelessWidget {
                       Icons.favorite_border,
                       color: Colors.pink,
                     ),
-                    Icon(
-                      Icons.add,
-                      color: Colors.grey,
+                    IconButton(
+                      icon: Icon(
+                        Icons.add,
+                        color: Colors.grey[800],
+                      ),
+                      onPressed: onAdd,
                     )
                   ],
                 ),
